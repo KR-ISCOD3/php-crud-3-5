@@ -34,6 +34,12 @@
             $stmt->bind_param("sssi",$name,$gender,$tel,$id);
             return $stmt->execute();
         }
+
+        public function delete($id){
+            $stmt = $this->conn->prepare("DELETE FROM `students` WHERE id = ?");
+            $stmt->bind_param("i",$id);
+            return $stmt->execute();;
+        }
     }
 
 

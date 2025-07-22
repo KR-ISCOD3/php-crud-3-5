@@ -10,9 +10,12 @@
         case 'create':
             $controller->create();
             break;
-            case 'edit':
-                $controller->edit($id);
-                break;
+        case 'edit':
+            $controller->edit($id);
+            break;
+        case 'destroy':
+            $controller->destroy($id);
+            break;
         default:
             $controller->index();
             break;
